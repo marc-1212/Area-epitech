@@ -1,0 +1,53 @@
+<template>
+  <div class="input-container">
+    <input class="area-input" type="text" placeholder="webhook url" v-model="channel">
+    <button @click="action" class="area-button">SAVE</button>
+  </div>
+</template>
+    
+<script lang="js">
+import { defineComponent } from 'vue';
+import dropdown from '../../assets/dropdown.png';
+import { updateCardsReaction } from '../../actioncardServices.js';
+
+export default defineComponent({
+  name: 'SendMotivation',
+  data() {
+    return {
+      channel: '',
+      localId: null
+    };
+  },
+  props: {
+    id: Number,
+    motivationChannel: String
+  },
+  methods: {
+    action() {
+      console.log(localStorage.getItem('userId'));
+      console.log(this.localId);
+      updateCardsReaction('Motivation', 'SendMotivation', 'motivationChannel', this.channel, this.localId, localStorage.getItem("userId")).then((res) => {
+        console.log(res);
+      })
+    }
+  },
+  created() {
+    this.localId = this.id;
+    this.channel = this.motivationChannel ? this.motivationChannel : '';
+  }
+})
+</script>
+      
+<style>
+.area-input {
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 2px;
+  margin: 0.25em 0;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+</style>

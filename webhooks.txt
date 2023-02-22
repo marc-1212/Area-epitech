@@ -1,0 +1,26 @@
+discord random-shit:
+https://discord.com/api/webhooks/1027527145632833616/vhyoMOqQiFaoeL3fuG012pX-UyhxuN7_f5XBILVike6YGcfvQ_2zYLHQki-R3H91uvMe
+
+discord bot token:
+MTAyOTE1MTE1MzI0MzU1Nzk2MA.GPGouh.Q2AgOZIYtUwsXM2H9cz-ZWpF3rGwG_ZONUmXH8
+
+oauth2 discord bot:
+https://discord.com/api/oauth2/authorize?client_id=1029151153243557960&permissions=8&scope=bot
+
+twitter Bearer token:
+AAAAAAAAAAAAAAAAAAAAAC%2FRhwEAAAAA2gdpKSjJtyiJRuL5xuFsX0ua5ko%3Dks6f0gfeDE0HU5NY6EbB75G5Xrd8fWxruYG9R4ymYRJ2zckEFq
+
+twitter API Secret Key:
+iIch8LRFY32fvOMiFx0To9q4PPLSblpo0Ce4XjqelixbUGNJyr
+
+twitter API Key:
+Z94bqP4RVpO4G5pnwMSRstFjB
+
+Weather webhook:
+https://discordapp.com/api/webhooks/1038408341799575552/XaBjiqoQAD_kyQ3Cx0HpvSS7WJKk7PimojB40QCQ7Wb3qtHPP6krhNoDsOb2uRowu0Ha
+
+Riot API key:
+RGAPI-1509e22b-bfeb-4e16-86ac-487760d74c39
+
+
+

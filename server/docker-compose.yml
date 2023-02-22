@@ -1,0 +1,64 @@
+version: '3.4'
+
+services:
+  ts-node-docker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: base
+    volumes:
+      - ./src:/node/app/src
+      - ./nodemon.json:/node/app/nodemon.json
+      - ./node_modules:/node/app/node_modules
+
+    container_name: ts-node-docker
+    depends_on:
+      - mysql_server
+    expose:
+      - '8080'
+    ports:
+      - '8080:8080'
+
+  node_client:
+    build:
+      context: ../client/
+      dockerfile: Dockerfile
+      target: base
+    container_name: node
+    expose:
+      - '8081'
+    ports:
+      - '8081:8081'
+    command: npm run serve -- --port 8081
+    volumes:
+    - ./area_apk:/home/node/app/public
+  
+  apk:
+    build:
+      context: ../App/
+      dockerfile: Dockerfile
+    container_name: apk
+    volumes:
+      - ./area_apk:/home/android/apk
+    command:  cp /home/android/area.apk /home/android/apk 
+    
+  mysql_server:
+    container_name: mysql-db
+    restart: unless-stopped
+    image: mysql:8.0
+    environment:
+      - MYSQL_USER=area
+      - MYSQL_PASSWORD=passwordxd
+      - MYSQL_ROOT_PASSWORD=12345
+      - MYSQL_DATABASE=area_db
+    ports:
+      - 7070:3306
+    #command: --init-file /data/application/init.sql
+    volumes:
+      - db:/var/lib/mysql
+      - ./sql/create_tables.sql:/data/application/create_tables.sql
+      - ./sql/insert_values.sql:/data/application/insert_values.sql
+
+volumes:
+  db:
+  area_apk:

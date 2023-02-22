@@ -1,0 +1,37 @@
+{
+  "name": "area-authentification",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "test": "jest"
+  },
+  "dependencies": {
+    "axios": "^1.1.2",
+    "core-js": "^3.8.3",
+    "googleapis": "^109.0.1",
+    "jets": "^0.14.1",
+    "pinia": "^2.0.23",
+    "typescript": "^4.8.4",
+    "vue": "^3.2.13",
+    "vue-cookies": "^1.8.1",
+    "vue-router": "^4.0.3",
+    "vue3-google-oauth2": "^1.0.6"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-router": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "autoprefixer": "^10.4.12",
+    "jest": "^29.1.2",
+    "postcss": "^8.4.17",
+    "tailwindcss": "^3.1.8"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ]
+}
